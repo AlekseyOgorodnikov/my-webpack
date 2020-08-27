@@ -1,0 +1,23 @@
+$maxWidth: 1280;
+@mixin adaptiv-font($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth: $maxWidth - 320;
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+$border: 1px solid black;
+
+.box {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+    border: $border;
+    h2 {
+        text-align: center;
+        color: red;
+    }
+}
+.image {
+    width: 500px;
+    height: 500px;
+}
